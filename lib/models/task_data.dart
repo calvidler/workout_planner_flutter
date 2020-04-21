@@ -59,8 +59,9 @@ class TaskData extends ChangeNotifier {
     final id = await dbHelper.insert(row);
     final task = Task(name: taskTitle, isChecked: isChecked, id: id);
     _tasks.add(task);
+    notifyListeners();
 
-    print('inserted row id: $id');
+//    print('inserted row id: $id');
   }
 
   void _updateTask({@required Task task}) async {
@@ -70,13 +71,13 @@ class TaskData extends ChangeNotifier {
       DatabaseHelper.columnIsChecked: task.isDone
     };
     final rowsAffected = await dbHelper.update(row);
-    print('updated $rowsAffected row(s)');
+//    print('updated $rowsAffected row(s)');
   }
 
   void _deleteTask(Task task) async {
     // Assuming that the number of rows is the id for the last row.
     final id = await dbHelper.queryRowCount();
     final rowsDeleted = await dbHelper.delete(task.id);
-    print('deleted $rowsDeleted row(s): row ${task.id}');
+//    print('deleted $rowsDeleted row(s): row ${task.id}');
   }
 }
