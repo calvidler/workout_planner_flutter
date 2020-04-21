@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todoey_flutter_ios/data/database_helper.dart';
-import 'package:todoey_flutter_ios/models/task.dart';
+import 'package:workout_planner_flutter/data/database_helper.dart';
+import 'package:workout_planner_flutter/models/task.dart';
 import 'dart:collection';
 
 class TaskData extends ChangeNotifier {

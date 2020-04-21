@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todoey_flutter_ios/screens/add_task_screen.dart';
-import 'package:todoey_flutter_ios/widgets/tasks_list.dart';
+import 'package:workout_planner_flutter/screens/add_tasks_screen.dart';
+import 'package:workout_planner_flutter/widgets/tasks_list.dart';
 import 'package:provider/provider.dart';
-import 'package:todoey_flutter_ios/models/task_data.dart';
+import 'package:workout_planner_flutter/models/task_data.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
